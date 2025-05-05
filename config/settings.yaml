@@ -1,0 +1,20 @@
+# Задержки (в миллисекундах)
+delays:
+  read_ms: 1
+  write_ms: 1 
+  shift_ms: 0   # сдвиг на 1 ячейку вперед или назад
+  rewind_ms: 10 # перемотка на произвольное число ячеек вперед/назад
+
+# Лимит оперативной памяти в байтах
+memory_limit_bytes: 104857600  # 100 МБ
+
+# false => std::sort для сортировки чанков в ChunkMergeSort, глубина стека - O(log n)
+# true  => heap_sort для сортировки чанков в ChunkMergeSort, глубина стека - O(1)
+strict_stack_limit: false
+
+# Дополнительная опция: диапазон значений для Counting Sort
+# Если указано, будет использоваться CountingSort с заданным диапазоном
+# Формат: [min_value, max_value]
+# Пример:
+# value_range: [0, 1000]
+value_range: []  # опционально, по умолчанию пустой
